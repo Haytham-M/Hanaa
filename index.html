@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expressing My Love</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        #loveMessage {
+            font-size: 24px;
+            color: #ff0066;
+            margin-top: 50px;
+        }
+        #heart {
+            color: #ff0066;
+            font-size: 50px;
+        }
+        #changeMessageBtn {
+            padding: 10px 20px;
+            font-size: 18px;
+            margin-top: 20px;
+            cursor: pointer;
+            background-color: #ff0066;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="loveMessage">Your Message Here <span id="heart">&#10084;</span></div>
+    <button id="changeMessageBtn" onclick="changeMessage()">Change Message</button>
+
+    <script>
+        function changeMessage() {
+            var newMessage = prompt("Enter a new message:");
+            if (newMessage !== null && newMessage !== "") {
+                document.getElementById("loveMessage").innerHTML = newMessage + " <span id='heart'>&#10084;</span>";
+            }
+        }
+    </script>
+</body>
+</html>
