@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Love+Ya+Like+A+Sister&display=swap');
+        body {
+            font-family: 'Love Ya Like A Sister', cursive; /* Change to your preferred font family */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: linear-gradient(to right, #ffd1dc, #fbc2eb, #a6c1ee);
+            animation: gradientAnimation 10s infinite alternate-reverse;
+        }
+
+        @keyframes gradientAnimation {
+            0% {
+                background-position: 0% 50%;
+            }
+            100% {
+                background-position: 100% 50%;
+            }
+        }
+
+        .container {
+            text-align: center;
+            font-size: 2rem;
+            padding: 20px;
+            max-width: 600px; /* Adjust as needed for your design */
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        #btn {
+            background-color: #e64567;
+            border: none;
+            color: white;
+            padding: 15px 30px; /* Adjusted padding for a larger button */
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 1.2rem; /* Adjusted font size */
+            margin: 20px 0; /* Increased margin for better spacing */
+            cursor: pointer;
+            border-radius: 8px; /* Added border-radius for rounded corners */
+            transition: background-color 0.3s ease; /* Smooth color transition */
+        }
+
+        #btn:hover {
+            background-color: #ff4a5a;
+        }
+
+        .confetti {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background-color: #e64567;
+            border-radius: 50%;
+            animation: confetti 1s ease-out;
+        }
+
+        @keyframes confetti {
+            0% {
+                transform: translate(0, 0);
+                opacity: 1;
+            }
+            100% {
+                transform: translate(calc(100vw * var(--x)), calc(100vh * var(--y)));
+                opacity: 0;
+            }
+        }
+
+        /* Responsive Styles */
+        @media screen and (max-width: 768px) {
+            .container {
+                font-size: 1.5rem;
+            }
+        }
